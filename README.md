@@ -187,6 +187,16 @@ You can set the footer's copyright author name like this:
 author = "My Name"
 ``` 
 
+To replace the default theme attribution:
+
+```toml
+[extra]
+
+# Footer Meta in HTML format: Replaces the theme
+# attribution portion of the footer
+meta = "Feedback? <a href\"/contact\">Get in touch</a>"
+```
+
 If you don't like the default copyright text,
 you can set it to completely custom HTML:
 
