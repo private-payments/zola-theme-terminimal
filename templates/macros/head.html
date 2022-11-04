@@ -2,7 +2,13 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="robots" content="noodp"/>
-
+{% if page.description %}
+    <meta name="description" content="{{ page.description }}"/>
+{% elif section.description %}
+    <meta name="description" content="{{ section.description }}"/>
+{% else %}
+    <meta name="description" content="{{ config.description }}"/>
+{% endif %}
     <link rel="stylesheet" href="{{ get_url(path="style.css", trailing_slash=false) | safe }}">
 
 {%- if config.extra.accent_color %}
